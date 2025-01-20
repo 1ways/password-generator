@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1 class="title">Generate a <span class="green">random password</span></h1>
+        <p class="sub-title">Never use an insecure password again.</p>
+        <input class="input" type="text" id="password-length" placeholder="Set password length (5-30)">
+        <label for="symbols" class="label">
+            <input type="checkbox" class="input-checkbox" id="symbols">
+            <span class="checkbox-checkmark"></span>
+            Include symbols
+        </label>
+        <label for="numbers" class="label">
+            <input type="checkbox" class="input-checkbox" id="numbers">
+            <span class="checkbox-checkmark"></span>
+            Include numbers
+        </label>
+        <button class="generate-btn" id="generate-btn">Generate passwords</button>
+        <div class="passwords">
+            <div class="passwords__item" id="first-password" data-text="Click to copy"></div>
+            <div class="passwords__item" id="second-password" data-text="Click to copy"></div>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
+
 </html>
